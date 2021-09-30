@@ -10,7 +10,7 @@ import javazoom.jl.player.Player;
 public class AudioPlayer implements Runnable {
 	
 	protected String file;
-	
+	protected int songLength =83000;
 	public AudioPlayer( String file ) {
 		this.file = file;
 	}
@@ -22,7 +22,7 @@ public class AudioPlayer implements Runnable {
 			FileInputStream fis = new FileInputStream(f);
 			Player playMP3 = new Player(fis);
 			playMP3.play();
-			
+			Thread.sleep(songLength);
 		}
 		catch(Exception ex)
 		{  

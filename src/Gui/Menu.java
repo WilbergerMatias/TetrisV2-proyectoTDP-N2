@@ -2,12 +2,9 @@ package Gui;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 import Lógica.Logica;
 
 import javax.swing.JButton;
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -16,8 +13,6 @@ import javax.swing.ImageIcon;
 
 public class Menu extends JFrame {
 	
-	private Logica miLogica;
-	private JPanel contentPane;
 	private Ayuda reglas;
 	
 	public Menu() {
@@ -31,7 +26,7 @@ public class Menu extends JFrame {
 		JButton btnJugar = new JButton("Jugar");
 		btnJugar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-					miLogica = new Logica();
+					new Logica();
 			}
 		});
 		btnJugar.setBounds(79, 309, 264, 33);
